@@ -24,7 +24,7 @@ MON, TUE, WED, THU, FRI, SAT, SUN = range(7)
 WEEKEND = (SAT, SUN)
 
 JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, \
-     NOV, DEC = range(1, 13)
+    NOV, DEC = range(1, 13)
 
 
 class HolidayBase(dict):
@@ -283,9 +283,9 @@ class Argentina(HolidayBase):
             pass
         else:
             self[date(year, APR, 2)] = "Día del Veterano y de los Caidos " \
-                                         "en la Guerra de Malvinas [Veterans" \
-                                         " Day and the Fallen in the" \
-                                         " Malvinas War]"
+                "en la Guerra de Malvinas [Veterans" \
+                " Day and the Fallen in the" \
+                " Malvinas War]"
 
         # Labor Day
         name = "Día del Trabajo [Labour Day]"
@@ -342,8 +342,8 @@ class Argentina(HolidayBase):
             self[date(year, OCT, 12)] = "Día de la Raza [Columbus day]"
         else:
             self[date(year, OCT, 12)] = "Día del Respeto a la Diversidad" \
-                                            " Cultural [Respect for" \
-                                            " Cultural Diversity Day]"
+                " Cultural [Respect for" \
+                " Cultural Diversity Day]"
         # National Sovereignty Day
         name = "Día Nacional de la Soberanía [National Sovereignty Day]"
         if not self.observed and date(year, NOV, 20).weekday() in WEEKEND:
@@ -356,7 +356,7 @@ class Argentina(HolidayBase):
             pass
         else:
             self[date(year, DEC, 8)] = "La Inmaculada Concepción" \
-                                            " [Immaculate Conception]"
+                " [Immaculate Conception]"
 
         # Christmas
         self[date(year, DEC, 25)] = "Navidad [Christmas]"
@@ -481,7 +481,7 @@ class Brazil(HolidayBase):
 
         if self.state == 'AM':
             self[date(year, SEP, 5)] = "Elevação do Amazonas" \
-                                             " à categoria de província"
+                " à categoria de província"
             self[date(year, NOV, 20)] = "Consciência Negra"
             self[date(year, DEC, 8)] = "Dia de Nossa Senhora da Conceição"
 
@@ -504,7 +504,7 @@ class Brazil(HolidayBase):
 
         if self.state == 'MA':
             self[date(year, JUL, 28)] = "Adesão do Maranhão" \
-                                         " à independência do Brasil"
+                " à independência do Brasil"
             self[date(year, DEC, 8)] = "Dia de Nossa Senhora da Conceição"
 
         if self.state == 'MT':
@@ -518,7 +518,7 @@ class Brazil(HolidayBase):
 
         if self.state == 'PA':
             self[date(year, AUG, 15)] = "Adesão do Grão-Pará" \
-                                           " à independência do Brasil"
+                " à independência do Brasil"
 
         if self.state == 'PB':
             self[date(year, AUG, 5)] = "Fundação do Estado"
@@ -552,7 +552,7 @@ class Brazil(HolidayBase):
 
         if self.state == 'SC':
             self[date(year, AUG, 11)] = "Criação da capitania," \
-                                           " separando-se de SP"
+                " separando-se de SP"
 
         if self.state == 'SP':
             self[date(year, JUL, 9)] = "Revolução Constitucionalista de 1932"
@@ -657,7 +657,7 @@ class Canada(HolidayBase):
             self[date(year, JAN, 1)] = name
             if self.observed and date(year, JAN, 1).weekday() == SUN:
                 self[date(year, JAN, 1) + rd(days=+1)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
             elif self.observed \
                     and date(year, JAN, 1).weekday() == SAT:
                 # Add Dec 31st from the previous year without triggering
@@ -779,7 +779,7 @@ class Canada(HolidayBase):
             if year >= 1879 and self.observed \
                     and date(year, JUL, 1).weekday() in WEEKEND:
                 self[date(year, JUL, 1) + rd(weekday=MO)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
         elif year >= 1867:
             if year >= 1983:
                 name = "Memorial Day"
@@ -789,7 +789,7 @@ class Canada(HolidayBase):
             if year >= 1879 and self.observed \
                     and date(year, JUL, 1).weekday() in WEEKEND:
                 self[date(year, JUL, 1) + rd(weekday=MO)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
 
         # Nunavut Day
         if self.prov == 'NU' and year >= 2001:
@@ -905,7 +905,7 @@ class Colombia(HolidayBase):
             pass
         else:
             self[date(year, DEC, 8)] = "La Inmaculada Concepción" \
-                                            " [Immaculate Conception]"
+                " [Immaculate Conception]"
 
         # Christmas
         self[date(year, DEC, 25)] = "Navidad [Christmas]"
@@ -947,7 +947,7 @@ class Colombia(HolidayBase):
             self[date(year, OCT, 12)] = name
         else:
             self[date(year, OCT, 12) + rd(weekday=MO)] = name + \
-                                                             "(Observed)"
+                "(Observed)"
 
         # All Saints’ Day
         name = "Dia de Todos los Santos [All Saint's Day]"
@@ -955,7 +955,7 @@ class Colombia(HolidayBase):
             self[date(year, NOV, 1)] = name
         else:
             self[date(year, NOV, 1) + rd(weekday=MO)] = name + \
-                                                             "(Observed)"
+                "(Observed)"
 
         # Independence of Cartagena
         name = "Independencia de Cartagena [Independence of Cartagena]"
@@ -963,7 +963,7 @@ class Colombia(HolidayBase):
             self[date(year, NOV, 11)] = name
         else:
             self[date(year, NOV, 11) + rd(weekday=MO)] = name + \
-                                                              "(Observed)"
+                "(Observed)"
 
         # Holidays based on Easter
 
@@ -1058,10 +1058,10 @@ class Mexico(HolidayBase):
         self[date(year, SEP, 16)] = name
         if self.observed and date(year, SEP, 16).weekday() == SAT:
             self[date(year, SEP, 16) + rd(days=-1)] = name + \
-                                                            " (Observed)"
+                " (Observed)"
         elif self.observed and date(year, SEP, 16).weekday() == SUN:
             self[date(year, SEP, 16) + rd(days=+1)] = name + \
-                                                            " (Observed)"
+                " (Observed)"
 
         # Revolution Day
         name = "Día de la Revolución [Revolution Day]"
@@ -1079,11 +1079,11 @@ class Mexico(HolidayBase):
             if self.observed \
                     and date(year, DEC, 1).weekday() == SAT:
                 self[date(year, DEC, 1) + rd(days=-1)] = name + \
-                                                              " (Observed)"
+                    " (Observed)"
             elif self.observed \
                     and date(year, DEC, 1).weekday() == SUN:
                 self[date(year, DEC, 1) + rd(days=+1)] = name + \
-                                                              " (Observed)"
+                    " (Observed)"
 
         # Christmas
         self[date(year, DEC, 25)] = "Navidad [Christmas]"
@@ -1119,7 +1119,7 @@ class Ukraine(HolidayBase):
         # Christmas Day (Orthodox)
         if year >= 1991:
             self[date(year, JAN, 7)] = "Різдво Христове" \
-                                           " (православне)"
+                " (православне)"
 
         # Women's Day
         if year > 1965:
@@ -1188,7 +1188,7 @@ class Ukraine(HolidayBase):
         # Christmas Day (Catholic)
         if year >= 2017:
             self[date(year, DEC, 25)] = "Різдво Христове" \
-                                             " (католицьке)"
+                " (католицьке)"
         # USSR holidays
         # Bloody_Sunday_(1905)
         if 1917 <= year < 1951:
@@ -1224,7 +1224,7 @@ class UnitedStates(HolidayBase):
             self[date(year, JAN, 1)] = name
             if self.observed and date(year, JAN, 1).weekday() == SUN:
                 self[date(year, JAN, 1) + rd(days=+1)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
             elif self.observed \
                     and date(year, JAN, 1).weekday() == SAT:
                 # Add Dec 31st from the previous year without triggering
@@ -1352,7 +1352,7 @@ class UnitedStates(HolidayBase):
             self[date(year, MAR, 17)] = name
             if date(year, MAR, 17).weekday() in WEEKEND:
                 self[date(year, MAR, 17) + rd(weekday=MO)] = name + \
-                                                               " (Observed)"
+                    " (Observed)"
 
         # Emancipation Day
         if self.state == 'PR':
@@ -1560,11 +1560,11 @@ class UnitedStates(HolidayBase):
             if self.observed \
                     and date(year, OCT, 18).weekday() == SAT:
                 self[date(year, OCT, 18) + rd(days=-1)] = name + \
-                                                              " (Observed)"
+                    " (Observed)"
             elif self.observed \
                     and date(year, OCT, 18).weekday() == SUN:
                 self[date(year, OCT, 18) + rd(days=+1)] = name + \
-                                                              " (Observed)"
+                    " (Observed)"
 
         # Nevada Day
         if self.state == 'NV' and year >= 1933:
@@ -1605,11 +1605,11 @@ class UnitedStates(HolidayBase):
             if self.observed \
                     and date(year, NOV, 11).weekday() == SAT:
                 self[date(year, NOV, 11) + rd(days=-1)] = name + \
-                                                               " (Observed)"
+                    " (Observed)"
             elif self.observed \
                     and date(year, NOV, 11).weekday() == SUN:
                 self[date(year, NOV, 11) + rd(days=+1)] = name + \
-                                                               " (Observed)"
+                    " (Observed)"
 
         # Discovery Day
         if self.state == 'PR':
@@ -1682,11 +1682,11 @@ class UnitedStates(HolidayBase):
             if self.observed \
                     and date(year, DEC, 25).weekday() == SAT:
                 self[date(year, DEC, 25) + rd(days=-1)] = name + \
-                                                               " (Observed)"
+                    " (Observed)"
             elif self.observed \
                     and date(year, DEC, 25).weekday() == SUN:
                 self[date(year, DEC, 25) + rd(days=+1)] = name + \
-                                                               " (Observed)"
+                    " (Observed)"
 
         # Day After Christmas
         if self.state == 'NC' and year >= 2013:
@@ -2194,6 +2194,11 @@ class Germany(HolidayBase):
 
             self[date(year, MAY, 1)] = 'Erster Mai'
 
+            if self.prov == "BE" and year == 2020:
+                self[date(year, MAY, 8)] = \
+                    "75. Jahrestag der Befreiung vom Nationalsozialismus " \
+                    "und der Beendigung des Zweiten Weltkriegs in Europa"
+
             self[easter(year) + rd(days=39)] = 'Christi Himmelfahrt'
 
             if self.prov == "BB":
@@ -2319,11 +2324,11 @@ class UnitedKingdom(HolidayBase):
             self[date(year, JAN, 1)] = name
             if self.observed and date(year, JAN, 1).weekday() == SUN:
                 self[date(year, JAN, 1) + rd(days=+1)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
             elif self.observed \
                     and date(year, JAN, 1).weekday() == SAT:
                 self[date(year, JAN, 1) + rd(days=+2)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
 
         # New Year Holiday
         if self.country in ('UK', 'Scotland'):
@@ -2333,10 +2338,10 @@ class UnitedKingdom(HolidayBase):
             self[date(year, JAN, 2)] = name
             if self.observed and date(year, JAN, 2).weekday() in WEEKEND:
                 self[date(year, JAN, 2) + rd(days=+2)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
             elif self.observed and date(year, JAN, 2).weekday() == MON:
                 self[date(year, JAN, 2) + rd(days=+1)] = name + \
-                                                             " (Observed)"
+                    " (Observed)"
 
         # St. Patrick's Day
         if self.country in ('UK', 'Northern Ireland', 'Ireland'):
@@ -2346,7 +2351,7 @@ class UnitedKingdom(HolidayBase):
             self[date(year, MAR, 17)] = name
             if self.observed and date(year, MAR, 17).weekday() in WEEKEND:
                 self[date(year, MAR, 17) + rd(weekday=MO)] = name + \
-                                                               " (Observed)"
+                    " (Observed)"
 
         # Good Friday
         if self.country != 'Ireland':
@@ -2462,7 +2467,7 @@ class UnitedKingdom(HolidayBase):
                 self[date(year, JUN, 3)] = "Golden Jubilee of Elizabeth II"
             elif year == 2011:
                 self[date(year, APR, 29)] = "Wedding of William and" \
-                                              " Catherine"
+                    " Catherine"
             elif year == 2012:
                 self[date(year, JUN, 5)] = "Diamond Jubilee of Elizabeth II"
 
@@ -2642,13 +2647,13 @@ class Czech(HolidayBase):
                                        " fašismem"
         if year >= 1951:
             self[date(year, JUL, 5)] = "Den slovanských věrozvěstů " \
-                                        "Cyrila a Metoděje"
+                "Cyrila a Metoděje"
             self[date(year, JUL, 6)] = "Den upálení mistra Jana Husa"
         if year >= 2000:
             self[date(year, SEP, 28)] = "Den české státnosti"
         if year >= 1951:
             self[date(year, OCT, 28)] = "Den vzniku samostatného " \
-                                            "československého státu"
+                "československého státu"
         if year >= 1990:
             self[date(year, NOV, 17)] = "Den boje za svobodu a demokracii"
 
@@ -2696,7 +2701,7 @@ class Slovak(HolidayBase):
         self[date(year, SEP, 15)] = "Sedembolestná Panna Mária"
         if year == 2018:
             self[date(year, OCT, 30)] = "100. výročie prijatia" \
-                                            " Deklarácie slovenského národa"
+                " Deklarácie slovenského národa"
         self[date(year, NOV, 1)] = "Sviatok Všetkých svätých"
 
         if year >= 2001:
@@ -3598,6 +3603,7 @@ class SouthAfrica(HolidayBase):
         self[date(2011, DEC, 27)] = presidential
         self[date(2014, MAY, 7)] = national_election
         self[date(2016, AUG, 3)] = local_election
+        self[date(2019, MAY, 8)] = national_election
 
         # As of 1995/1/1, whenever a public holiday falls on a Sunday,
         # it rolls over to the following Monday
